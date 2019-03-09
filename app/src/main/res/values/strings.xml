@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">lesson20.02context</string>
+    <string name="some_string">lololololo</string>
+    <string name="friends_text">Friends</string>
+    <string name="search_text">Search</string>
+    <string name="home_text">Home</string>
+</resources>
