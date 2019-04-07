@@ -1,4 +1,4 @@
-package com.example.lesson2002context;
+package com.example.lesson2002context.first_screen;
 
 import android.annotation.SuppressLint;
 import android.support.annotation.NonNull;
@@ -10,6 +10,8 @@ import android.os.Bundle;
 import android.view.MenuItem;
 import android.widget.TextView;
 
+import com.example.lesson2002context.R;
+
 public class MainActivity extends AppCompatActivity implements BottomNavigationView.OnNavigationItemSelectedListener {
 
     TextView textMassage;
@@ -19,6 +21,10 @@ public class MainActivity extends AppCompatActivity implements BottomNavigationV
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        UserProfileContract.View view = new UserProfileView(findViewById(R.id.root));
+        UserProfileContract.Actions actions = new UserProfilePresenter(view);
+        view.setActions(actions);
+
         String secondTextLolo = getString(R.string.some_string);
         textMassage = findViewById(R.id.text);
 
@@ -26,7 +32,6 @@ public class MainActivity extends AppCompatActivity implements BottomNavigationV
         BottomNavigationView navigation = findViewById(R.id.navigation);
         navigation.setOnNavigationItemSelectedListener(this);
     }
-
 
 
     @Override
@@ -46,8 +51,9 @@ public class MainActivity extends AppCompatActivity implements BottomNavigationV
 
         return false;
     }
+
     @SuppressLint("CommitTranaction")
-   protected void addFragment(Integer containerRes,
+    protected void addFragment(Integer containerRes,
                                Fragment fragment,
                                boolean addToBackStack,
                                boolean animate) {
