@@ -1,9 +1,12 @@
-package com.example.lesson2002context;
+package com.example.lesson2002context.first_screen;
 
+import android.content.Intent;
 import android.graphics.drawable.AnimationDrawable;
 import android.support.constraint.ConstraintLayout;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+
+import com.example.lesson2002context.R;
 
 public class LaunchScreen extends AppCompatActivity {
 
