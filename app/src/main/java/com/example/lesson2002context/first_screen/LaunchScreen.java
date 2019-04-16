@@ -1,10 +1,7 @@
 package com.example.lesson2002context.first_screen;
 
-import android.content.Intent;
-import android.graphics.drawable.AnimationDrawable;
-import android.support.constraint.ConstraintLayout;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 
 import com.example.lesson2002context.R;
 
@@ -15,11 +12,6 @@ public class LaunchScreen extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_launch_screen);
 
-        ConstraintLayout constraintLayout = findViewById(R.id.launch_layout);
-        AnimationDrawable animationDrawable = (AnimationDrawable) constraintLayout.getBackground();
-        animationDrawable.setEnterFadeDuration(2000);
-        animationDrawable.setExitFadeDuration(4000);
-        animationDrawable.start();
     }
 }
 
