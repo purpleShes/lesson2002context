@@ -10,16 +10,9 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity android:name=".CircleViewActivity"></activity>
-        <activity android:name=".MyProgressActivity" />
-        <activity android:name=".first_screen.ProgressHeader">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
-        <activity android:name=".first_screen.LaunchScreen" />
-        <activity android:name=".first_screen.MainActivity" />
+        <activity android:name=".MainActivity"></activity>
+        <activity android:name=".ProgressHeader"></activity>
+        <activity android:name=".LaunchScreen"></activity>
     </application>
 
 </manifest>
